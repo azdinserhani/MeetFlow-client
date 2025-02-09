@@ -1,4 +1,4 @@
-import Header from "./component/Header";
+import Header from "./component/LandingPage/Header";
 import "./index.css";
 import LandingPage from "./pages/LandingPage";
 function App() {

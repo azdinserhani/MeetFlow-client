@@ -3,3 +3,9 @@
   box-sizing: border-box;
   font-family: "Inter Tight", serif;
 }
+@theme {
+
+  --color-purple-custom: #664cdd;
+
+  /* ... */
+}
