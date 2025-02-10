@@ -3,6 +3,7 @@ import BenefitsCard from "./BenefitsCard";
 import { IoShareSocial } from "react-icons/io5";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BiSolidCategory } from "react-icons/bi";
+import SectionHeader from "./SectionHeader";
 const Benefits = () => {
   const data = [
     {
@@ -27,16 +28,19 @@ const Benefits = () => {
       color: "text-yellow-400",
     },
   ];
+  const headData = {
+    title: "Benefits",
+    desc: "The smart choice for your team",
+    subDesc:
+      " Everything you need to simplify your projects, boost productivity, and keep team aligned.",
+  };
   return (
     <div className="w-full my-40">
-      <div className="flex-col space-y-7 text-center">
-        <span className="text-pink-400  font-semibold">Benefits</span>
-        <p className="font-bold text-5xl">The smart choice for your team</p>
-        <p className="text-gray-400 text-lg">
-          Everything you need to simplify your projects, boost productivity, and
-          keep team aligned.
-        </p>
-      </div>
+      <SectionHeader
+        title={headData.title}
+        desc={headData.desc}
+        subDesc={headData.subDesc}
+      />
       <div className="flex gap-4 my-6 mx-3">
         {data.map((item) => (
           <BenefitsCard
