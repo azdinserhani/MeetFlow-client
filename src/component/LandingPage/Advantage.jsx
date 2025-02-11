@@ -9,14 +9,14 @@ const Advantage = () => {
       title: "To-do List",
       desc: "Organize your daily tasks effortlessly with our intuitive to-do list. Stay focused and prioritize what matters most.",
       number: "01",
-      color: "blue",
+      color: "yellow",
     },
     {
       id: 2,
       title: "Team Member Tracking",
       desc: "Easily track your team members' progress and stay connected. Ensure everyone is aligned and working towards shared goals.",
       number: "02",
-      color: "green",
+      color: "purple",
     },
     {
       id: 3,
