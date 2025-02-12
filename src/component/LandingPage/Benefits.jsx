@@ -35,7 +35,7 @@ const Benefits = () => {
       " Everything you need to simplify your projects, boost productivity, and keep team aligned.",
   };
   return (
-    <div className="w-full my-40">
+    <div className="w-full">
       <SectionHeader
         title={headData.title}
         desc={headData.desc}

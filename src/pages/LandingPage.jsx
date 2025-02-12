@@ -4,7 +4,7 @@ import TrustedBy from "../component/LandingPage/TrustedBy";
 import Benefits from "../component/LandingPage/Benefits";
 import Advantage from "../component/LandingPage/Advantage";
 import Features from "../component/LandingPage/Features";
-import Testimonials from "../component/LandingPage/Testimonials";
+import Pricing from "../component/LandingPage/Pricing";
 
 const LandingPage = () => {
   return (
@@ -21,7 +21,7 @@ const LandingPage = () => {
       <Benefits />
       <Advantage />
       <Features />
-      <Testimonials/>
+      <Pricing/>
     </div>
   );
 };

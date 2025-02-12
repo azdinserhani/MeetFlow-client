@@ -39,7 +39,7 @@ const Features = () => {
     },
   ];
   return (
-    <div className="mt-32">
+    <div className="">
       <SectionHeader
         title={headData.title}
         desc={headData.desc}
