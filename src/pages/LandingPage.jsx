@@ -5,6 +5,7 @@ import Benefits from "../component/LandingPage/Benefits";
 import Advantage from "../component/LandingPage/Advantage";
 import Features from "../component/LandingPage/Features";
 import Pricing from "../component/LandingPage/Pricing";
+import Testemoniel from "../component/LandingPage/Testemoniel";
 
 const LandingPage = () => {
   return (
@@ -21,7 +22,9 @@ const LandingPage = () => {
       <Benefits />
       <Advantage />
       <Features />
-      <Pricing/>
+      <Pricing />
+      <Testemoniel />
+      //TODO: create footer
     </div>
   );
 };

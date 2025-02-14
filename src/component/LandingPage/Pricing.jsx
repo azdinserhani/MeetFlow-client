@@ -1,7 +1,9 @@
 import React from "react";
 import SectionHeader from "./SectionHeader";
 import PricingCard from "./PricingCard";
-
+import { TfiHummer } from "react-icons/tfi";
+import { FaRocket } from "react-icons/fa";
+import { MdBusinessCenter } from "react-icons/md";
 const Pricing = () => {
   const data = {
     title: "Pricing",
@@ -20,7 +22,8 @@ const Pricing = () => {
         "✓ Basic Project Tracking",
         "✓ Limited File Storage"
       ],
-      buttonText: "Get Started"
+      buttonText: "Get Started",
+      icon: TfiHummer
     },
     {
       title: "Pro Plan",
@@ -32,7 +35,8 @@ const Pricing = () => {
         "✓ Advanced Project Tracking",
         "✓ Customizable Dashboards"
       ],
-      buttonText: "Upgrade Now"
+      buttonText: "Upgrade Now",
+      icon: FaRocket
     },
     {
       title: "Enterprise Plan",
@@ -44,11 +48,13 @@ const Pricing = () => {
         "✓ Advanced Analytics & Reporting",
         "✓ Unlimited File Storage"
       ],
-      buttonText: "Contact Us"
+      buttonText: "Contact Us",
+      icon:MdBusinessCenter
+
     }
   ];
   return (
-    <div>
+    <div className="p-4">
       <SectionHeader
         title={data.title}
         desc={data.desc}
@@ -56,7 +62,7 @@ const Pricing = () => {
       />
       <div className="grid grid-cols-3 gap-x-4 mt-7">
         { pricingCardsData.map((item) => {
-          return <PricingCard item={ item} />
+          return <PricingCard item={ item } icon={ item.icon} />
         })}
       </div>
     </div>
