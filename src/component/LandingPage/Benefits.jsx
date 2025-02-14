@@ -4,7 +4,11 @@ import { IoShareSocial } from "react-icons/io5";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BiSolidCategory } from "react-icons/bi";
 import SectionHeader from "./SectionHeader";
+import { useTranslation } from "react-i18next";
+
 const Benefits = () => {
+  const { t } = useTranslation();
+
   const data = [
     {
       id: 1,
@@ -30,7 +34,7 @@ const Benefits = () => {
   ];
   const headData = {
     title: "Benefits",
-    desc: "The smart choice for your team",
+    desc: t("benefits_title"),
     subDesc:
       " Everything you need to simplify your projects, boost productivity, and keep team aligned.",
   };
