@@ -24,7 +24,7 @@ const LandingPage = () => {
       <Features />
       <Pricing />
       <Testemoniel />
-      //TODO: create footer
+      {/* TODO: create footer */}
     </div>
   );
 };
