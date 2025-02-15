@@ -12,31 +12,30 @@ const Benefits = () => {
   const data = [
     {
       id: 1,
-      title: "Seamless Collaboration",
-      desc: "Empower your team to collaborate in real-time with easy task management and transparent project tracking.",
+      title: t("collaboration_title"),
+      desc: t("collaboration_description"),
       icon: IoShareSocial,
       color: "text-purple-custom",
     },
     {
       id: 2,
-      title: "All-in-One Solution",
-      desc: "Manage everything from tasks to team communication in one intuitive platform designed to boost productivity.",
+      title: t("solution_title"),
+      desc: t("solution_desc"),
       icon: BiSolidCategory,
       color: "text-pink-400",
     },
     {
       id: 3,
-      title: "Customizable Workflow",
-      desc: "Manage everything from tasks to team communication in one intuitive platform designed to boost productivity.",
+      title: t("customizable_title"),
+      desc: t("customizable_desc"),
       icon: IoSettingsSharp,
       color: "text-yellow-400",
     },
   ];
   const headData = {
-    title: "Benefits",
+    title: t("benefits"),
     desc: t("benefits_title"),
-    subDesc:
-      " Everything you need to simplify your projects, boost productivity, and keep team aligned.",
+    subDesc: t("benefits_description"),
   };
   return (
     <div className="w-full">

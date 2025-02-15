@@ -1,8 +1,11 @@
 import React from "react";
 import AdvantageCard from "./AdvantageCard";
 import SectionHeader from "./SectionHeader";
+import { useTranslation } from "react-i18next";
 
 const Advantage = () => {
+    const { t } = useTranslation();
+
   const advantageData = [
     {
       id: 1,
@@ -27,7 +30,7 @@ const Advantage = () => {
     },
   ];
   const headData = {
-    title: "Advantage",
+    title: t("advantages"),
     desc: "Key features to boost your productivity",
     subDesc: ` Explore the essential tools designed to streamline your workflow,
           enhance team collaboration, and ensure your projects run smoothly from

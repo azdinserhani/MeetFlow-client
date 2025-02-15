@@ -11,7 +11,7 @@ const Header = () => {
       i18n.changeLanguage(lng);
     };
   return (
-    <div className="flex items-center justify-between p-4 bg-white shadow-md">
+    <div className="flex items-center mb-6 justify-between p-4 bg-white shadow-md rounded-2xl">
       <div className="flex items-center -ml-2">
         <img src={Logo} alt="MeetFlow Logo" className="h-14" />
         <h1 className="text-2xl font-bold ml-2">MeetFlow</h1>
