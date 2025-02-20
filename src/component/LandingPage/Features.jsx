@@ -5,35 +5,36 @@ import { PiLampPendantFill } from "react-icons/pi";
 import { FaTasks } from "react-icons/fa";
 import { LuGoal } from "react-icons/lu";
 import { MdChatBubble } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 const Features = () => {
+    const { t } = useTranslation();
   const headData = {
-    title: "Features",
-    desc: "Powerful Features to Elevate Your Workflow",
-    subDesc:
-      "Explore advanced tools that help you make smarter decisions, track progress, and manage your tasks with ease. Stay organized and in control with features designed to enhance your productivity.",
+    title: t("features.fea"),
+    desc: t("features.title"),
+    subDesc: t("features.description"),
   };
   const featureData = [
     {
-      title: "Make Smart Decisions",
-      desc: "Get real-time insights, reports, and alerts to help you make more informed decisions.",
+      title: t("features.smart_decisions"),
+      desc: t("features.smart_decisions_desc"),
       color: "green",
       icon: PiLampPendantFill
     },
     {
-      title: "Optimize Your Goals",
-      desc: "Track your progress and stay aligned with personal or project goals using smart tracking tools.",
+      title: t("features.optimize_goals"),
+      desc: t("features.optimize_goals_desc"),
       color: "red",
       icon: LuGoal
     },
     {
-      title: "Task Management",
-      desc: "Easily manage tasks, deadlines, and priorities to keep projects running smoothly.",
+      title: t("features.task_management"),
+      desc: t("features.task_management_desc"),
       color: "purple",
       icon: FaTasks
     },
     {
-      title: "Team Chat",
-      desc: "Stay connected with real-time messaging, making team collaboration easier.",
+      title: t("features.team_chat"),
+      desc: t("features.team_chat_desc"),
       color: "yellow",
       icon: MdChatBubble
     },

@@ -25,7 +25,7 @@ const PricingCard = ({ item, icon: Icon }) => {
         ))}
       </ul>
 
-      {item.title === "Pro Plan" ? (
+      {item.title === "Pro Plan" || item.title === "الخطة الاحترافية" ? (
         <button className="p-3 bg-purple-custom cursor-pointer rounded-lg text-white font-bold transform transition duration-300 hover:scale-105 hover:shadow-lg">
           {item.buttonText}
         </button>

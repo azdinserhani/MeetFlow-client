@@ -4,41 +4,43 @@ import SectionHeader from "./SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Advantage = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const advantageData = [
     {
       id: 1,
-      title: "To-do List",
-      desc: "Organize your daily tasks effortlessly with our intuitive to-do list. Stay focused and prioritize what matters most.",
+      title: t("advantages.todo_list"),
+      desc: t("advantages.todo_list_desc"),
       number: "01",
       color: "yellow",
     },
     {
       id: 2,
-      title: "Team Member Tracking",
-      desc: "Easily track your team members' progress and stay connected. Ensure everyone is aligned and working towards shared goals.",
+      title: t("advantages.team_tracking"),
+      desc: t("advantages.team_tracking_desc"),
       number: "02",
       color: "purple",
     },
     {
       id: 3,
-      title: "Project Tracking",
-      desc: "Monitor project timelines and milestones in real-time. Keep projects on track and meet your deadlines with confidence.",
+      title: t("advantages.project_tracking"),
+      desc: t("advantages.project_tracking_desc"),
       number: "03",
       color: "red",
     },
   ];
   const headData = {
-    title: t("advantages"),
-    desc: "Key features to boost your productivity",
-    subDesc: ` Explore the essential tools designed to streamline your workflow,
-          enhance team collaboration, and ensure your projects run smoothly from
-          start to finish`,
+    title: t("advantages.ad"),
+    desc: t("advantages.title"),
+    subDesc: t("advantages.description"),
   };
   return (
     <div className="flex flex-col space-y-7">
-    <SectionHeader title={headData.title} desc={headData.desc} subDesc={headData.subDesc}/>
+      <SectionHeader
+        title={headData.title}
+        desc={headData.desc}
+        subDesc={headData.subDesc}
+      />
       <div className="flex  space-x-4 ">
         {advantageData.map((item) => {
           return <AdvantageCard item={item} />;

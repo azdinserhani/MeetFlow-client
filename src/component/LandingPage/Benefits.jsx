@@ -12,30 +12,30 @@ const Benefits = () => {
   const data = [
     {
       id: 1,
-      title: t("collaboration_title"),
-      desc: t("collaboration_description"),
+      title: t("benefits.seamless_collaboration"),
+      desc: t("benefits.seamless_collaboration_desc"),
       icon: IoShareSocial,
       color: "text-purple-custom",
     },
     {
       id: 2,
-      title: t("solution_title"),
-      desc: t("solution_desc"),
+      title: t("benefits.all_in_one_solution"),
+      desc: t("benefits.all_in_one_solution_desc"),
       icon: BiSolidCategory,
       color: "text-pink-400",
     },
     {
       id: 3,
-      title: t("customizable_title"),
-      desc: t("customizable_desc"),
+      title: t("benefits.all_in_one_solution"),
+      desc: t("benefits.all_in_one_solution_desc"),
       icon: IoSettingsSharp,
       color: "text-yellow-400",
     },
   ];
   const headData = {
-    title: t("benefits"),
-    desc: t("benefits_title"),
-    subDesc: t("benefits_description"),
+    title: t("benefits.ben"),
+    desc: t("benefits.title"),
+    subDesc: t("benefits.description"),
   };
   return (
     <div className="w-full">

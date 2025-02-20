@@ -4,54 +4,56 @@ import PricingCard from "./PricingCard";
 import { TfiHummer } from "react-icons/tfi";
 import { FaRocket } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+
 const Pricing = () => {
+      const { t } = useTranslation();
+  
   const data = {
-    title: "Pricing",
-    desc: "Flexible plans for every team",
-    subDesc: `Choose the plan that best fits your team's needs. Whether you're just getting started or managing large projects, 
-      You Manage offers affordable solutions to help you stay organized and productive`,
+    title: t("pricing.pr"),
+    desc: t("pricing.title"),
+    subDesc: t("pricing.description"),
   };
   const pricingCardsData = [
     {
-      title: "Starter Plan",
-      description: "Perfect for individuals or small teams getting started with task management",
-      price: "FREE",
+      title: t("pricing.starter_plan"),
+      description: t("pricing.starter_plan_desc"),
+      price: t("pricing.starter_plan_price"),
       features: [
-        "✓ Task Management Tools",
-        "✓ Team Collaboration (up to 3 members)",
-        "✓ Basic Project Tracking",
-        "✓ Limited File Storage"
+        t("pricing.starter_plan_features.0"),
+        t("pricing.starter_plan_features.1"),
+        t("pricing.starter_plan_features.2"),
+        t("pricing.starter_plan_features.3"),
       ],
-      buttonText: "Get Started",
-      icon: TfiHummer
+      buttonText: t("pricing.starter_plan_btn"),
+      icon: TfiHummer,
     },
     {
-      title: "Pro Plan",
-      description: "Designed for growing teams that need advanced features and flexibility",
-      price: "$19",
+      title: t("pricing.pro_plan"),
+      description: t("pricing.pro_plan_desc"),
+      price: t("pricing.pro_plan_price"),
       features: [
-        "✓ Everything in Starter Plan",
-        "✓ Unlimited Team Members",
-        "✓ Advanced Project Tracking",
-        "✓ Customizable Dashboards"
+        t("pricing.pro_plan_features.0"),
+        t("pricing.pro_plan_features.1"),
+        t("pricing.pro_plan_features.2"),
+        t("pricing.pro_plan_features.3"),
       ],
-      buttonText: "Upgrade Now",
-      icon: FaRocket
+      buttonText: t("pricing.pro_plan_btn"),
+      icon: FaRocket,
     },
     {
-      title: "Enterprise Plan",
-      description: "Best for large teams and enterprises with multiple projects and complex workflows",
-      price: "$49",
+      title: t("pricing.enterprise_plan"),
+      description: t("pricing.enterprise_plan_desc"),
+      price: t("pricing.enterprise_plan_price"),
       features: [
-        "✓ Everything in Pro Plan",
-        "✓ Dedicated Account Manager",
-        "✓ Advanced Analytics & Reporting",
-        "✓ Unlimited File Storage"
+        t("pricing.enterprise_plan_features.0"),
+        t("pricing.enterprise_plan_features.1"),
+        t("pricing.enterprise_plan_features.2"),
+        t("pricing.enterprise_plan_features.3"),
       ],
-      buttonText: "Contact Us",
-      icon:MdBusinessCenter
-
-    }
+      buttonText: t("pricing.enterprise_plan_btn"),
+      icon: MdBusinessCenter,
+    },
   ];
   return (
     <div className="p-4">

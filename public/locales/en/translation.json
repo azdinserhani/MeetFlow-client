@@ -1,38 +1,112 @@
+
 {
- 
+  "navbar": {
     "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
     "blog": "Blog",
     "contact": "Contact",
     "login": "Login",
-    "get_started": "Get Started",
-    "hero_title": "Seamless Meetings, Effortless Collaboration",
-    "hero_description": "Manage tasks and projects easily with an all-in-one platform designed for seamless collaboration.",
-    "request_demo": "Request a Demo",
-    "trusted_by": "We trusted by",
-    "benefits":"benefits",
-    "benefits_title": "The smart choice for your team",
-    "benefits_description": "Everything you need to simplify your projects, boost productivity, and keep teams aligned.",
-    "collaboration_title": "Seamless Collaboration",
-    "collaboration_description": "Empower your team to collaborate in real-time with easy task management and transparent project tracking.",
-    "solution_title":"All-in-One Solution",
-    "solution_desc":"Manage everything from tasks to team communication in one intuitive platform designed to boost productivity.",
-    "customizable_title":"Customizable Workflow",
-    "customizable_desc":"Manage everything from tasks to team communication in one intuitive platform designed to boost productivity.",
-    "learn_more": "Learn More",
-    "advantages": "Advantages",
-    "advantages_title": "Key features to boost your productivity",
-    "features_overview": "Explore the essential tools designed to streamline your workflow, enhance team collaboration, and ensure your projects run smoothly from start to finish.",
+    "get_started": "Get Started"
+  },
+  "hero": {
+    "title": "Seamless Meetings, Effortless Collaboration",
+    "description": "Manage tasks and projects easily with an all-in-one platform designed for seamless collaboration.",
+    "request_demo": "Request a Demo"
+  },
+  "trusted_by": {
+    "title": "We are trusted by"
+  },
+  "benefits": {
+    "ben":"benefits",
+    "title": "The smart choice for your team",
+    "description": "Everything you need to simplify your projects, boost productivity, and keep teams aligned.",
+    "seamless_collaboration": "Seamless Collaboration",
+    "seamless_collaboration_desc": "Empower your team to collaborate in real-time with easy task management and transparent project tracking.",
+    "all_in_one_solution": "All-in-One Solution",
+    "all_in_one_solution_desc": "Manage everything from tasks to team communication in one intuitive platform designed to boost productivity.",
+    "customizable_workflow": "Customizable Workflow",
+    "customizable_workflow_desc": "Manage everything from tasks to team communication in one intuitive platform designed to boost productivity."
+  },
+  "advantages": {
+    "ad":"Advantages",
+    "title": "Key features to boost your productivity",
+    "description": "Explore the essential tools designed to streamline your workflow, enhance team collaboration, and ensure your projects run smoothly.",
     "todo_list": "To-do List",
+    "todo_list_desc": "Organize your daily tasks effortlessly with our intuitive to-do list. Stay focused and prioritize what matters most.",
     "team_tracking": "Team Member Tracking",
+    "team_tracking_desc": "Easily track your team members’ progress and stay connected. Ensure everyone is aligned and working towards shared goals.",
     "project_tracking": "Project Tracking",
-    "pricing_title": "Flexible plans for every team",
+    "project_tracking_desc": "Monitor project timelines and milestones in real-time. Keep projects on track and meet your deadlines with confidence."
+  },
+  "features": {
+    "fea":"Features",
+    "title": "Powerful Features to Elevate Your Workflow",
+    "description": "Explore advanced tools that help you make smarter decisions, track progress, and manage your tasks with ease.",
+    "smart_decisions": "Make Smart Decisions",
+    "smart_decisions_desc": "Get real-time insights, reports, and alerts to help you make more informed decisions.",
+    "optimize_goals": "Optimize Your Goals",
+    "optimize_goals_desc": "Track your progress and stay aligned with personal or project goals using smart tracking tools.",
+    "task_management": "Task Management",
+    "task_management_desc": "Easily manage tasks, deadlines, and priorities to keep projects running smoothly.",
+    "team_chat": "Team Chat",
+    "team_chat_desc": "Stay connected with real-time messaging, making team collaboration easier."
+  },
+  "pricing": {
+    "pr":"pricing",
+    "title": "Flexible plans for every team",
+    "description": "Choose the plan that best fits your team’s needs. Whether you’re just getting started or managing large projects, we offer affordable solutions.",
     "starter_plan": "Starter Plan",
+    "starter_plan_price": "FREE",
+    "starter_plan_desc": "Perfect for individuals or small teams getting started with task management.",
+    "starter_plan_features": [
+      "✓ Task Management Tools",
+      "✓ Team Collaboration (up to 3 members)",
+      "✓ Basic Project Tracking",
+      "✓ Limited File Storage"
+    ],
     "pro_plan": "Pro Plan",
+    "pro_plan_price": "$19 / month",
+    "pro_plan_desc": "Designed for growing teams that need advanced features and flexibility.",
+    "pro_plan_features": [
+      "✓ Everything in Starter Plan",
+      "✓ Unlimited Team Members",
+      "✓ Advanced Project Tracking",
+      "✓ Customizable Dashboards"
+    ],
+    "starter_plan_btn":"Get Started",
+    "pro_plan_btn":"Upgrade Now",
     "enterprise_plan": "Enterprise Plan",
-    "testimonials_title": "What our users say",
-    "footer": "All rights reserved."
-  
-
+    "enterprise_plan_price": "$49 / month",
+    "enterprise_plan_desc": "Best for large teams and enterprises with multiple projects and workflows.",
+    "enterprise_plan_features": [
+      "✓ Everything in Pro Plan",
+      "✓ Dedicated Account Manager",
+      "✓ Advanced Analytics & Reporting",
+      "✓ Unlimited File Storage"
+    ],
+    "enterprise_plan_btn":"Contact Us"
+  },
+  "testimonials": {
+    "tes":"testimonials",
+    "title": "What our users say",
+    "description":"See how MeetFlow has transformed the way teams work. Hear directly from users who've improved their productivity and project management.",
+    "reviews": [
+      {
+        "name": "Sarah Thompson",
+        "position": "Product Manager, Spotify",
+        "review": "MeetFlow has completely changed how our team collaborates. It’s intuitive and has made tracking projects so much easier."
+      },
+      {
+        "name": "Alex Rivera",
+        "position": "Marketing Lead, DocuSign",
+        "review": "With MeetFlow, we’ve streamlined our workflow and work deadlines more efficiently. The team chat feature is a game-changer."
+      },
+      {
+        "name": "David Lee",
+        "position": "Operations Director, Codecademy",
+        "review": "MeetFlow has helped us keep all our tasks in order. The interface is clean, and it makes managing multiple projects a breeze."
+      }
+    ]
+  }
 }
