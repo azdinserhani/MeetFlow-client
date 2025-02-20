@@ -6,6 +6,7 @@ import Advantage from "../component/LandingPage/Advantage";
 import Features from "../component/LandingPage/Features";
 import Pricing from "../component/LandingPage/Pricing";
 import Testemoniel from "../component/LandingPage/Testemoniel";
+import Footer from "../component/LandingPage/Footer";
 
 const LandingPage = () => {
   return (
@@ -24,7 +25,7 @@ const LandingPage = () => {
       <Features />
       <Pricing />
       <Testemoniel />
-      {/* TODO: create footer */}
+      <Footer/>
     </div>
   );
 };
