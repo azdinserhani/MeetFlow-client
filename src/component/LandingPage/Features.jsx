@@ -46,7 +46,7 @@ const Features = () => {
         desc={headData.desc}
         subDesc={headData.subDesc}
       />
-      <div className="flex space-x-5 p-7">
+      <div className="flex flex-col md:flex-row space-y-4 space-x-5 p-7">
         {featureData.map((item) => {
           return <FeaturesCard item={item} icon={item.icon}/>;
         })}

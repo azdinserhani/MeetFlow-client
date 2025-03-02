@@ -44,7 +44,7 @@ const Benefits = () => {
         desc={headData.desc}
         subDesc={headData.subDesc}
       />
-      <div className="flex gap-4 my-6 mx-3">
+      <div className="flex  flex-col md:flex-row gap-4 my-6 mx-3">
         {data.map((item) => (
           <BenefitsCard
             key={item.id}

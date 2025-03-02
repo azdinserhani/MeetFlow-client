@@ -62,7 +62,7 @@ const Pricing = () => {
         desc={data.desc}
         subDesc={data.subDesc}
       />
-      <div className="grid grid-cols-3 gap-x-4 mt-7">
+      <div className="grid md:grid-cols-3 gap-x-4 mt-7 gap-y-4">
         { pricingCardsData.map((item) => {
           return <PricingCard item={ item } icon={ item.icon} />
         })}

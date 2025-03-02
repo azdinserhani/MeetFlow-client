@@ -36,7 +36,7 @@ const Testemoniel = () => {
         desc={testimonialsData.description}
         subDesc={testimonialsData.subDesc}
       />
-      <div className=" flex space-x-4 p-3">
+      <div className=" flex md:flex-row flex-col space-y-4 space-x-4 p-3">
         {testimonials.map((item) => {
           return <TestemonielCard item={item} />;
         })}

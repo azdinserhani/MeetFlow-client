@@ -58,7 +58,7 @@ const LoginForm = () => {
             )}
           </div>
           <span className="text-purple-custom font-semibold text-right cursor-pointer">
-            Forget password?
+            <Link to="/forget-password">Forget password?</Link>
           </span>
           <button className="p-4 hover:bg-purple-custom  hover:text-white font-semibold cursor-pointer border-y-purple-custom border rounded-lg appearance-none duration-300 text-purple-custom">
             Login

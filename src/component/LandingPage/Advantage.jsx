@@ -41,7 +41,7 @@ const Advantage = () => {
         desc={headData.desc}
         subDesc={headData.subDesc}
       />
-      <div className="flex  space-x-4 ">
+      <div className="flex flex-col space-y-4 md:flex-row space-x-4 p-4">
         {advantageData.map((item) => {
           return <AdvantageCard item={item} />;
         })}
