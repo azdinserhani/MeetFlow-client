@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import GoogleButton from "./GoogleButton";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { IoEyeSharp } from "react-icons/io5";
-import Button from "../LandingPage/Button";
+import { Link } from "react-router-dom";
+
+import { FaRegEyeSlash } from "react-icons/fa";
+
 const LoginForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
-    <div className="w-[50%]  flex flex-col  text-left p-20">
+    <div className="sm:w-full md:w-[50%]  flex flex-col  text-left md:p-20  ">
       <div className="flex flex-col space-y-4">
         <h2 className="text-purple-custom text-5xl font-bold">MeetFlow</h2>
         <p className="font-semibold text-4xl">Log in to your Account</p>
@@ -29,11 +33,29 @@ const LoginForm = () => {
           <div className="p-4  w-full rounded-sm  hover:border-purple-custom border-2 flex items-center space-x-3 border-gray-400 duration-200">
             <RiLockPasswordLine fontSize={25} color="gray" />
             <input
-              type="password"
+              type={`${showPassword ? "text" : "password"}`}
               placeholder="Password"
               className="border-none  outline-none w-full"
             />
-            <IoEyeSharp fontSize={25} color="gray" />
+            {showPassword ? (
+              <FaRegEyeSlash
+                fontSize={25}
+                color="gray"
+                className="cursor-pointer"
+                onClick={() => {
+                  setShowPassword(!showPassword);
+                }}
+              />
+            ) : (
+              <IoEyeSharp
+                fontSize={25}
+                color="gray"
+                className="cursor-pointer"
+                onClick={() => {
+                  setShowPassword(!showPassword);
+                }}
+              />
+            )}
           </div>
           <span className="text-purple-custom font-semibold text-right cursor-pointer">
             Forget password?
@@ -42,7 +64,14 @@ const LoginForm = () => {
             Login
           </button>
         </form>
-        <p>Don't have an account?</p>
+        <p>
+          Don't have an account?
+          <Link to="/register">
+            <span className="text-purple-custom font-semibold pl-2 cursor-pointer">
+              Register now
+            </span>
+          </Link>
+        </p>
       </div>{" "}
     </div>
   );

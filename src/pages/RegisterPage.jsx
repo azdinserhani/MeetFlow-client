@@ -1,13 +1,15 @@
-import LoginForm from "../component/AuthPage/LoginForm";
-import RightSideInfo from "../component/AuthPage/RightSideInfo";
+import React from "react";
 
-const LoginPage = () => {
+import RightSideInfo from "../component/AuthPage/RightSideInfo";
+import RegisterForm from "../component/AuthPage/RegisterForm";
+
+const RegisterPage = () => {
   return (
     <div className="flex h-screen justify-center items-center">
-      <LoginForm />
+      <RegisterForm />
       <RightSideInfo />
     </div>
-  );  
+  );
 };
 
-export default LoginPage;
+export default RegisterPage;

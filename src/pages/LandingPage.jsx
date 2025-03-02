@@ -7,10 +7,12 @@ import Features from "../component/LandingPage/Features";
 import Pricing from "../component/LandingPage/Pricing";
 import Testemoniel from "../component/LandingPage/Testemoniel";
 import Footer from "../component/LandingPage/Footer";
+import Header from "../component/LandingPage/Header";
 
 const LandingPage = () => {
   return (
     <div className="bg-gray-50 rounded-2xl">
+      <Header />
       <Hero />
       <div className="w-full justify-center flex">
         <img
@@ -25,7 +27,7 @@ const LandingPage = () => {
       <Features />
       <Pricing />
       <Testemoniel />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
