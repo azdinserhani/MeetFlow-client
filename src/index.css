@@ -10,3 +10,26 @@
 
   /* ... */
 }
+
+
+.custom-scrollbar {
+  overflow-y: auto;
+}
+
+/* Apply custom scrollbar styles to a specific element */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #8888883b;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}

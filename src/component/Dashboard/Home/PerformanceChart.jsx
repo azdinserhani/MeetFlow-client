@@ -6,7 +6,6 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import DateRangeSelect from "./DateRangeSelect";
 
 const data = [
   { date: "01", thisMonth: 7, lastMonth: 6 },
@@ -32,36 +31,39 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 const PerformanceChart = () => {
-  return (
-      <div className="w-full  p-5 rounded-lg ">
-          <div className="flex justify-between mb-12">
-              <h2 className="text-lg font-semibold mb-2">Performance</h2>  
-              <DateRangeSelect />
-          </div>
-      
-      <ResponsiveContainer width="100%" height={250}>
-        <LineChart data={data}>
-          <XAxis dataKey="date" />
-          <YAxis />
-          <Tooltip content={<CustomTooltip />} />
-          <Line
-            type="monotone"
-            dataKey="thisMonth"
-            stroke="#3b82f6"
-            strokeWidth={2}
-            dot={{ r: 4 }}
-          />
-          <Line
-            type="monotone"
-            dataKey="lastMonth"
-            stroke="#f97316"
-            strokeWidth={2}
-            dot={{ r: 4 }}
-          />
-        </LineChart>
-      </ResponsiveContainer>
+return (
+    <div className="w-full p-5 rounded-lg">
+        <div className="flex justify-between mb-12">
+            <h2 className="text-lg font-semibold mb-2">Performance</h2>
+            <select className="p-2 bg-gray-100 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="1">This Month</option>
+                <option value="2">Last Month</option>
+            </select>
+        </div>
+
+        <ResponsiveContainer width="100%" height={250}>
+            <LineChart data={data}>
+                <XAxis dataKey="date" />
+                <YAxis />
+                <Tooltip content={<CustomTooltip />} />
+                <Line
+                    type="monotone"
+                    dataKey="thisMonth"
+                    stroke="#3b82f6"
+                    strokeWidth={2}
+                    dot={{ r: 4 }}
+                />
+                <Line
+                    type="monotone"
+                    dataKey="lastMonth"
+                    stroke="#f97316"
+                    strokeWidth={2}
+                    dot={{ r: 4 }}
+                />
+            </LineChart>
+        </ResponsiveContainer>
     </div>
-  );
+);
 };
 
 export default PerformanceChart;

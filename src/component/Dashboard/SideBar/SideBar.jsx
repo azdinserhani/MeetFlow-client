@@ -10,9 +10,16 @@ import { CiLogout } from "react-icons/ci";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 
 import NavItem from "./NavItem";
+import { Link } from "react-router-dom";
 const SideBar = () => {
   const [open, setOpen] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
   return (
     <div
       className={`flex-col border-r border-gray-200 h-screen relative ${
@@ -34,31 +41,80 @@ const SideBar = () => {
       />
       <nav className="mt-10 ml-6 ">
         <ul className="space-y-4 text-gray-400 ">
-          <NavItem label={"Home"} icon={GrHomeRounded} open={open} />
+          <div className={selectedItem === "Home" ? "text-black" : ""}>
+            <Link to="/dashBoard/home">
+              <NavItem
+                label={"Home"}
+                icon={GrHomeRounded}
+                open={open}
+                onClick={() => handleItemClick("Home")}
+              />
+            </Link>
+          </div>
+
           <NavItem
             label={"Projects"}
             icon={PiProjectorScreenChartLight}
             open={open}
             menuItems={["My Projects", "All Projects"]}
+            onClick={() => handleItemClick("Projects")}
           />
+
           <NavItem
             label={"Tasks"}
             icon={FaTasks}
             open={open}
             menuItems={["All Tasks", "My Tasks"]}
+            onClick={() => handleItemClick("Tasks")}
           />
-          <NavItem label={"Team"} icon={RiTeamFill} open={open} />
-          <NavItem label={"Settings"} icon={IoSettingsOutline} open={open} />
+          <div className={selectedItem === "Team" ? "text-black" : ""}>
+            <Link to="/dashBoard/team">
+              <NavItem
+                label={"Team"}
+                icon={RiTeamFill}
+                open={open}
+                onClick={() => handleItemClick("Team")}
+              />
+            </Link>
+          </div>
+          <div className={selectedItem === "Settings" ? "text-black" : ""}>
+            <Link to="/dashBoard/settings">
+              <NavItem
+                label={"Settings"}
+                icon={IoSettingsOutline}
+                open={open}
+                onClick={() => handleItemClick("Settings")}
+              />
+            </Link>
+          </div>
         </ul>
       </nav>
       <nav className="absolute bottom-2 ml-6 flex-col">
         <ul className="text-gray-400 space-y-3">
-          <NavItem
-            label={"Help & information"}
-            icon={IoIosInformationCircleOutline}
-            open={open}
-          />
-          <NavItem label={"Log out"} icon={CiLogout} open={open} />
+          <div
+            className={
+              selectedItem === "Help & information" ? "text-black" : ""
+            }
+          >
+            <Link to="/dashBoard/help">
+              <NavItem
+                label={"Help & information"}
+                icon={IoIosInformationCircleOutline}
+                open={open}
+                onClick={() => handleItemClick("Help & information")}
+              />
+            </Link>
+          </div>
+          <div className={selectedItem === "Log out" ? "text-black" : ""}>
+            <Link to="/logout">
+              <NavItem
+                label={"Log out"}
+                icon={CiLogout}
+                open={open}
+                onClick={() => handleItemClick("Log out")}
+              />
+            </Link>
+          </div>
         </ul>
       </nav>
     </div>
