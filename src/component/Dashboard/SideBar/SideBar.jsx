@@ -1,0 +1,68 @@
+import React, { useState } from "react";
+import { PiProjectorScreenChartLight } from "react-icons/pi";
+import { GrHomeRounded } from "react-icons/gr";
+import { IoIosArrowForward } from "react-icons/io";
+import Logo from "/logo.png";
+import { FaTasks } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
+import { IoSettingsOutline } from "react-icons/io5";
+import { CiLogout } from "react-icons/ci";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+
+import NavItem from "./NavItem";
+const SideBar = () => {
+  const [open, setOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  return (
+    <div
+      className={`flex-col border-r border-gray-200 h-screen relative ${
+        open ? "w-60" : "w-20"
+      } duration-300`}
+    >
+      <div className="flex gap-1 items-center">
+        <img src={Logo} alt="" className="h-16 mt-2 ml-2 cursor-pointer" />
+        <h1 className={`${!open && "hidden"} font-bold text-2xl`}>MeetFlow</h1>
+      </div>
+      <IoIosArrowForward
+        onClick={() => {
+          setOpen(!open);
+          setMenuOpen(open);
+        }}
+        className={`absolute top-9 -right-3 bg-gray-200 rounded-full p-1 text-2xl cursor-pointer ${
+          open && "rotate-180"
+        }`}
+      />
+      <nav className="mt-10 ml-6 ">
+        <ul className="space-y-4 text-gray-400 ">
+          <NavItem label={"Home"} icon={GrHomeRounded} open={open} />
+          <NavItem
+            label={"Projects"}
+            icon={PiProjectorScreenChartLight}
+            open={open}
+            menuItems={["My Projects", "All Projects"]}
+          />
+          <NavItem
+            label={"Tasks"}
+            icon={FaTasks}
+            open={open}
+            menuItems={["All Tasks", "My Tasks"]}
+          />
+          <NavItem label={"Team"} icon={RiTeamFill} open={open} />
+          <NavItem label={"Settings"} icon={IoSettingsOutline} open={open} />
+        </ul>
+      </nav>
+      <nav className="absolute bottom-2 ml-6 flex-col">
+        <ul className="text-gray-400 space-y-3">
+          <NavItem
+            label={"Help & information"}
+            icon={IoIosInformationCircleOutline}
+            open={open}
+          />
+          <NavItem label={"Log out"} icon={CiLogout} open={open} />
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default SideBar;

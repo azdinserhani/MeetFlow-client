@@ -11,9 +11,9 @@ import Header from "../component/LandingPage/Header";
 
 const LandingPage = () => {
   return (
-    <div className="bg-gray-50 rounded-2xl">
+    <div className=" lg:mx-auto lg:max-w-7xl bg-gray-50 rounded-2xl">
       <Header />
-       <Hero />
+      <Hero />
       <div className="w-full justify-center flex">
         <img
           src="/test-img.webp"
@@ -26,7 +26,7 @@ const LandingPage = () => {
       <Advantage />
       <Features />
       <Pricing />
-     <Testemoniel />
+      <Testemoniel />
       <Footer />
     </div>
   );

@@ -5,15 +5,21 @@ import LoginPage from "./pages/LoginPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
 import ForgetPassword from "./pages/ForgetPassword";
+import DashboardLayout from "./layouts/DashboardLayout";
+import Home from "./pages/Dashboard/Home";
 function App() {
   return (
-    <div className="px-4 lg:mx-auto lg:max-w-7xl">
+    <div className="px-4">
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route path="home" element={<Home />} />
+            <Route path="settings" element={<p>settings</p>} />
+          </Route>
         </Routes>
       </Router>
     </div>

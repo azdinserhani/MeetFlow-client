@@ -1,7 +1,8 @@
 @import "tailwindcss";
 * {
   box-sizing: border-box;
-  font-family: "Inter Tight", serif;
+ font-family: "Inter", serif;
+  font-optical-sizing: auto;
 }
 @theme {
 
