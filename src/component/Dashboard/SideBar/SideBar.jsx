@@ -51,15 +51,16 @@ const SideBar = () => {
               />
             </Link>
           </div>
-
-          <NavItem
-            label={"Projects"}
-            icon={PiProjectorScreenChartLight}
-            open={open}
-            menuItems={["My Projects", "All Projects"]}
-            onClick={() => handleItemClick("Projects")}
-          />
-
+          <div className={selectedItem === "Home" ? "text-black" : ""}>
+            <Link to="/dashBoard/projects">
+              <NavItem
+                label={"Projects"}
+                icon={PiProjectorScreenChartLight}
+                open={open}
+                onClick={() => handleItemClick("Projects")}
+              />
+            </Link>
+          </div>
           <NavItem
             label={"Tasks"}
             icon={FaTasks}

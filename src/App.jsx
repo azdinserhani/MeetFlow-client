@@ -7,6 +7,7 @@ import RegisterPage from "./pages/RegisterPage";
 import ForgetPassword from "./pages/ForgetPassword";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Home from "./pages/Dashboard/Home";
+import Projects from "./pages/Dashboard/Projects";
 function App() {
   return (
     <div className="px-4">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route path="home" element={<Home />} />
+            <Route path="projects" element={<Projects />} />
             <Route path="settings" element={<p>settings</p>} />
           </Route>
         </Routes>
