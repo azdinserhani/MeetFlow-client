@@ -20,6 +20,7 @@ function App() {
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route path="home" element={<Home />} />
             <Route path="projects" element={<Projects />} />
+            <Route path="project/:id" element={<p>project detail</p>} />
             <Route path="settings" element={<p>settings</p>} />
           </Route>
         </Routes>
